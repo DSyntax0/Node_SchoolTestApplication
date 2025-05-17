@@ -2,7 +2,8 @@
 const express = require("express");
 const app = express();
 const db = require("./db");
-const PORT = 1002;
+require('dotenv').config();
+const PORT = process.env.PORT || 1002;
 
 const bodyParser = require("body-parser");
 app.use(bodyParser.json()); // this will store all my data into req.body
